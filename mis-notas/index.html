@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mis notas</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <header>
@@ -19,7 +20,7 @@
       </nav>
     </header>
     <main>
-      <form class="tarjeta">
+      <form class="tarjeta" id="form-nota">
         <h2>Nueva Nota</h2>
         <label for="titulo">Título</label>
         <input
@@ -32,8 +33,18 @@
         <label for="nota">Nota</label>
         <textarea id="nota" placeholder="Detalles (opcional)"></textarea>
 
-        <label for="recordatorio">Recordatorio</label>
-        <input id="recordatorio" type="datetime-local" />
+        <div class="fila">
+          <div>
+            <label for="fecha">Fecha</label>
+            <input id="fecha" type="date" />
+          </div>
+
+          <div>
+            <label for="hora">Hora</label>
+            <input id="hora" type="time" />
+          </div>
+        </div>
+
         <button class="boton-notas">Agregar nota</button>
       </form>
 
