@@ -173,3 +173,42 @@ nav {
   color: white;
   font-weight: bold;
 }
+
+/* =========================================================
+   6. ESCRITORIO  (TAREA 8: completa los ___)
+   Pégalo al FINAL de tu styles.css
+ 
+   @media = "aplica estas reglas SOLO si se cumple la condición".
+   min-width: 768px = "solo si la pantalla mide 768px o más".
+   En el celular nada de esto se aplica: tu CSS de arriba
+   sigue siendo el diseño móvil. Esto se llama "mobile first".
+   ========================================================= */
+
+@media (min-width: 768px) {
+  /* Centrar todo y que no se estire infinito en pantallas grandes */
+  body {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  /* Título a la izquierda, filtros a la derecha.
+     OJO: antes debes envolver el h1 y el p en un div (ver mensaje). */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* El formulario angosto a la izquierda, la lista a la derecha */
+  main {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+
+  /* Las notas en 2 columnas iguales */
+  .lista {
+    grid-template-columns: repeat(2, 1fr); /* prueba repeat(2, 1fr) */
+    align-items: start;
+  }
+}
