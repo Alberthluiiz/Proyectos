@@ -1,0 +1,175 @@
+/* =========================================================
+   1. BASE: reglas para toda la página
+   ========================================================= */
+
+/* El padding y el borde se cuentan DENTRO del ancho.
+   Así un campo con width: 100% no se sale de su caja. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f4; /* color de fondo de la página */
+  font-family: system-ui, sans-serif;
+  padding: 10px; /* espacio entre el borde de la pantalla y el contenido */
+}
+
+/* =========================================================
+   2. ESTRUCTURA: cómo se acomodan las cajas grandes
+   ========================================================= */
+
+/* grid + gap = espacio entre los hijos (formulario y lista) */
+main {
+  display: grid;
+  gap: 16px;
+}
+
+/* lo mismo, pero entre las tarjetas de la lista */
+.lista {
+  display: grid;
+  gap: 16px;
+}
+
+/* caja blanca: la usan el formulario y cada nota */
+.tarjeta {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* =========================================================
+   3. FORMULARIO
+   ========================================================= */
+
+label {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* reglas que comparten input y textarea (separados por coma) */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+/* solo lo que es exclusivo del textarea */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.boton-notas {
+  font: inherit;
+  font-weight: bold;
+  background: #2f5fd3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  width: 100%;
+  margin-top: 15px;
+  cursor: pointer; /* manita al pasar el mouse */
+}
+
+/* =========================================================
+   4. TARJETA DE NOTA  (TAREA 6: esto lo completas tú)
+   Cambia cada ___ por un valor. Pistas al lado.
+   ========================================================= */
+
+/* La fecha en forma de píldora.
+   En el HTML ponle al span: class="fecha" */
+.fecha {
+  background: #e8eefc;
+  color: #2f5fd3;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* La fila de botones de abajo */
+.acciones {
+  display: flex;
+  gap: 10px;
+}
+
+/* Los tres botones de la tarjeta */
+.acciones button {
+  /* "todos los button que están dentro de .acciones" */
+  font: inherit;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  color: #222;
+}
+
+/* El botón "Hecha" ocupa todo el espacio que sobra.
+   En el HTML ponle: class="boton-hecha" */
+.boton-hecha {
+  flex: 1; /* 1 = "toma todo el espacio libre" */
+}
+
+.acciones .boton-borrar {
+  color: #c62828;
+}
+
+/* =========================================================
+   5. ENCABEZADO Y FILTROS  (TAREA 7: completa los ___)
+   Pégalo al FINAL de tu styles.css
+   ========================================================= */
+
+/* Separa el header del resto de la página */
+header {
+  margin-bottom: 16px;
+}
+
+/* El título grande */
+h1 {
+  margin: 0;
+}
+
+/* El resumen "4 notas · 1 vencida · 1 hecha" */
+header p {
+  margin: 4px 0 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* La "barra" gris que contiene los 3 botones */
+nav {
+  display: flex;
+  gap: 4px;
+  background: #ecece6;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+/* Cada botón de filtro (sin seleccionar) */
+.filtro {
+  flex: 1;
+  font: inherit;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+/* El filtro seleccionado.
+   Fíjate: .filtro.activo va JUNTO, sin espacio.
+   Significa "un elemento que tiene LAS DOS clases". */
+.filtro.activo {
+  background: #1c1c1c;
+  color: white;
+  font-weight: bold;
+}
