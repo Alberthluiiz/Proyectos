@@ -1,15 +1,53 @@
 /* =================================
    MIS GASTOS · estilos propios
-   (las variables de color llegan en S03)
 ================================= */
 
-/* Texto general de la app */
-body {
-  font-family: "DM Sans", sans-serif;
+/* =================================
+   1. VARIABLES (un solo :root)
+================================= */
+:root {
+  /* Colores base */
+  --fondo: #f2f5f3;
+  --superficie: #fff;
+  --tinta: #14221d;
+  --tinta-suave: #5c6b65;
+  --linea: #dce3df;
+  --verde: #1f7a5c;
+  --verde-claro: #ddefe7;
+  --coral: #d2543f;
+  --ambar: #c98a1b;
+  --ambar-claro: #fbefd6;
+
+  /* Colores de categoría */
+  --cat-comida: #e07a3f;
+  --cat-transporte: #3d7dd8;
+  --cat-casa: #7a5bc7;
+  --cat-ocio: #d24d8a;
+  --cat-salud: #2f9e8f;
+  --cat-otros: #8a9690;
+
+  /* Fuentes */
+  --f-titulo: "Bricolage Grotesque", sans-serif;
+  --f-texto: "DM Sans", sans-serif;
+  --f-monto: "DM Mono", monospace;
+
+  /* Truco: Bootstrap usa mis variables */
+  --bs-body-bg: var(--fondo);
+  --bs-body-color: var(--tinta);
+  --bs-body-font-family: var(--f-texto);
 }
+
+/* =================================
+   2. TEXTOS
+================================= */
 
 /* Títulos */
 h1 {
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--f-titulo);
   font-weight: 800;
+}
+
+/* Montos (dinero) */
+.monto {
+  font-family: var(--f-monto);
 }
