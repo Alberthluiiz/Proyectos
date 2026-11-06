@@ -38,21 +38,42 @@
   </head>
 
   <body>
-    <div class="container">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <div class="container">
-          <section class="Pantalla Inicio"></section>
-          <section class="Pantalla Resumen"></section>
-          <section class="Pantalla Ajustes"></section>
-        </div>
-        <button></button>
-      </main>
-    </div>
+    <!-- =================================
+      CABECERA (título y mes)
+    ================================= -->
+    <header>
+      <div class="container"></div>
+    </header>
 
+    <!-- =================================
+      PANTALLAS (solo se ve una a la vez)
+    ================================= -->
+    <main>
+      <div class="container">
+        <!-- Pantalla 1: Inicio -->
+        <section id="pantalla-inicio"></section>
+        <!-- Pantalla 2: Resumen -->
+        <section id="pantalla-resumen"></section>
+        <!-- Pantalla 3: Ajustes -->
+        <section id="pantalla-ajustes"></section>
+      </div>
+    </main>
+
+    <!-- =================================
+      BOTÓN + (agregar gasto)
+    ================================= -->
+    <button id="btn-agregar"></button>
+
+    <!-- =================================
+      NAVEGACIÓN INFERIOR
+    ================================= -->
     <nav></nav>
+
+    <!-- =================================
+      CAPA NUEVO GASTO (formulario)
+    ================================= -->
+    <div id="capa-agregar"></div>
+
     <!-- =================================
       SCRIPTS (al final del body)
     ================================= -->
