@@ -1,5 +1,5 @@
 /* =========================================================
-   1. BASE: reglas para toda la página
+                        1. BASE
    ========================================================= */
 
 * {
@@ -13,7 +13,7 @@ body {
 }
 
 /* =========================================================
-   2. ESTRUCTURA: cómo se acomodan las cajas grandes
+                      2. ESTRUCTURA
    ========================================================= */
 
 main {
@@ -34,7 +34,7 @@ main {
 }
 
 /* =========================================================
-   3. FORMULARIO
+                      3. FORMULARIO
    ========================================================= */
 
 label {
@@ -78,8 +78,7 @@ textarea {
 }
 
 /* =========================================================
-   4. TARJETA DE NOTA  (TAREA 6: esto lo completas tú)
-   Cambia cada ___ por un valor. Pistas al lado.
+                  4. TARJETA DE NOTA 
    ========================================================= */
 
 .fecha {
@@ -115,8 +114,7 @@ textarea {
 }
 
 /* =========================================================
-   5. ENCABEZADO Y FILTROS  (TAREA 7: completa los ___)
-   Pégalo al FINAL de tu styles.css
+                5. ENCABEZADO Y FILTROS 
    ========================================================= */
 
 header {
@@ -159,13 +157,7 @@ nav {
 }
 
 /* =========================================================
-   6. ESCRITORIO  (TAREA 8: completa los ___)
-   Pégalo al FINAL de tu styles.css
- 
-   @media = "aplica estas reglas SOLO si se cumple la condición".
-   min-width: 768px = "solo si la pantalla mide 768px o más".
-   En el celular nada de esto se aplica: tu CSS de arriba
-   sigue siendo el diseño móvil. Esto se llama "mobile first".
+                        6. ESCRITORIO 
    ========================================================= */
 
 @media (min-width: 768px) {
