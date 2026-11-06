@@ -51,3 +51,266 @@ h1 {
 .monto {
   font-family: var(--f-monto);
 }
+
+/* Tarjeta Saldo */
+.tarjeta-saldo {
+  background-color: var(--verde);
+  color: var(--superficie);
+}
+
+.tarjeta-saldo .monto {
+  font-size: 32px;
+}
+
+.tarjeta-saldo .progress {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.tarjeta-saldo .progress-bar {
+  background-color: var(--superficie);
+}
+
+/* =================================
+   3. FILTROS (chips)
+================================= */
+.chip {
+  background-color: var(--superficie);
+  border: 1px solid var(--linea);
+}
+
+/* Pegado = el MISMO botón con las 2 clases */
+.chip.activo {
+  background-color: var(--tinta);
+  color: var(--superficie);
+}
+
+/* =================================
+   4. FILAS DE GASTO
+================================= */
+.fila {
+  background-color: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+/* Quita el espacio de abajo de los p dentro de la fila */
+.fila p {
+  margin: 0;
+}
+
+/* Monto de la fila en coral */
+.fila .monto {
+  color: var(--coral);
+}
+
+/* Cuadrito con la inicial */
+.cuadrito {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  color: var(--superficie);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Un color por categoría (solo cambia el fondo) */
+.cat-comida {
+  background-color: var(--cat-comida);
+}
+.cat-transporte {
+  background-color: var(--cat-transporte);
+}
+.cat-casa {
+  background-color: var(--cat-casa);
+}
+.cat-ocio {
+  background-color: var(--cat-ocio);
+}
+.cat-salud {
+  background-color: var(--cat-salud);
+}
+.cat-otros {
+  background-color: var(--cat-otros);
+}
+
+/* =================================
+   5. AVATAR (la L de arriba)
+================================= */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--verde-claro);
+  color: var(--verde);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =================================
+   6. ESTRUCTURA GENERAL
+   La app mide máximo 480 px y queda centrada,
+   así en la compu también parece un celular.
+================================= */
+.container {
+  max-width: 480px;
+}
+
+/* Espacio abajo para que la barra no tape la última fila */
+main {
+  padding-bottom: 120px;
+}
+
+/* =================================
+   7. CABECERA
+================================= */
+header {
+  padding-top: 16px;
+}
+
+/* "Hola, Luis": pequeño y gris */
+.saludo {
+  margin: 0;
+  font-size: 14px;
+  color: var(--tinta-suave);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* =================================
+   8. SELECTOR DE MES
+================================= */
+.selector-mes {
+  margin: 16px 0;
+  font-weight: 600;
+}
+
+/* Botones redondos con la flecha */
+.btn-mes {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--linea);
+  background-color: var(--superficie);
+  color: var(--tinta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =================================
+   9. TARJETA DE SALDO (espacios)
+================================= */
+.tarjeta-saldo {
+  margin-bottom: 16px;
+}
+
+.tarjeta-saldo p {
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
+
+/* Fila de abajo de la tarjeta: texto pequeño */
+.tarjeta-saldo .d-flex {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* =================================
+   10. FILTROS (espacios)
+================================= */
+.filtros {
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+}
+
+/* Que los chips no se aplasten ni partan el texto */
+.chip {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 6px 14px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* =================================
+   11. LISTA
+================================= */
+/* Títulos de día: "HOY · VIERNES 6" */
+.dia {
+  margin: 16px 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* Descripción del gasto (la línea de arriba) */
+.descripcion p {
+  font-weight: 600;
+}
+
+/* "Comida - Efectivo": pequeño y gris */
+.descripcion .detalle {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--tinta-suave);
+}
+
+/* =================================
+   12. BARRA DE NAVEGACIÓN (abajo)
+================================= */
+.barra {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 8px 0 20px; /* 20 px abajo por el borde del celular */
+  background-color: var(--superficie);
+  border-top: 1px solid var(--linea);
+}
+
+/* Botones de la barra: sin fondo, gris */
+.btn-nav {
+  background: none;
+  border: none;
+  color: var(--tinta-suave);
+  font-size: 12px;
+  gap: 2px;
+}
+
+.btn-nav i {
+  font-size: 22px;
+}
+
+/* El de la pantalla actual: verde y en negrita */
+.btn-nav.activo {
+  color: var(--verde);
+  font-weight: 700;
+}
+
+/* =================================
+   13. BOTÓN + (flotante)
+================================= */
+#btn-agregar {
+  position: fixed;
+  bottom: 88px;
+  /* 16 px desde el borde derecho de la app (no de la pantalla) */
+  right: max(16px, calc(50% - 224px));
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  border: none;
+  background-color: var(--coral);
+  color: var(--superficie);
+  font-size: 24px;
+  box-shadow: 0 8px 20px rgba(210, 84, 63, 0.35);
+  z-index: 1031; /* encima de la barra */
+}

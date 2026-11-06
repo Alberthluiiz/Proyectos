@@ -44,11 +44,11 @@
     <header>
       <div class="container d-flex justify-content-between align-items-center">
         <div class="lado-izquierdo">
-          <p>Hola, Luis</p>
+          <p class="saludo">Hola, Luis</p>
           <h1>Mis Gastos</h1>
         </div>
 
-        <div class="lado-derecho">L</div>
+        <div class="lado-derecho avatar">L</div>
       </div>
     </header>
 
@@ -59,10 +59,14 @@
       <div class="container">
         <!-- Pantalla 1: Inicio -->
         <section id="pantalla-inicio">
-          <div class="d-flex align-items-center gap-3">
-            <button><i class="bi bi-chevron-left"></i></button>
+          <div class="selector-mes d-flex align-items-center gap-3">
+            <button class="btn-mes" aria-label="Mes anterior">
+              <i class="bi bi-chevron-left"></i>
+            </button>
             <span id="texto-mes">Noviembre 2026</span>
-            <button><i class="bi bi-chevron-right"></i></button>
+            <button class="btn-mes" aria-label="Mes siguiente">
+              <i class="bi bi-chevron-right"></i>
+            </button>
           </div>
           <article class="tarjeta-saldo p-4 rounded-4">
             <p>Gastado este mes</p>
@@ -83,7 +87,7 @@
             </div>
           </article>
 
-          <div class="d-flex gap-2 overflow-auto">
+          <div class="filtros d-flex gap-2 overflow-auto">
             <button class="btn chip rounded-pill activo" data-categoria="todos">
               Todos
             </button>
@@ -107,37 +111,37 @@
             </button>
           </div>
           <ul class="list-unstyled" id="lista-gastos">
-            <li>Hoy · viernes 6</li>
-            <li class="d-flex align-items-center gap-3">
-              <span>C</span>
+            <li class="dia">Hoy · viernes 6</li>
+            <li class="fila d-flex align-items-center gap-3">
+              <span class="cuadrito cat-comida">C</span>
               <div class="descripcion">
                 <p>Almuerzo</p>
-                <p>Comida - Efectivo</p>
+                <p class="detalle">Comida - Efectivo</p>
               </div>
               <span class="monto ms-auto">-18.00</span>
             </li>
-            <li class="d-flex align-items-center gap-3">
-              <span>T</span>
+            <li class="fila d-flex align-items-center gap-3">
+              <span class="cuadrito cat-transporte">T</span>
               <div class="descripcion">
                 <p>Bus al trabajo</p>
-                <p>Transporte - Tarjeta</p>
+                <p class="detalle">Transporte - Tarjeta</p>
               </div>
               <span class="monto ms-auto">-25.00</span>
             </li>
-            <li>Ayer · jueves 5</li>
-            <li class="d-flex align-items-center gap-3">
-              <span>C</span>
+            <li class="dia">Ayer · jueves 5</li>
+            <li class="fila d-flex align-items-center gap-3">
+              <span class="cuadrito cat-casa">C</span>
               <div class="descripcion">
                 <p>Recibo de luz</p>
-                <p>Casa - Transferencia</p>
+                <p class="detalle">Casa - Transferencia</p>
               </div>
               <span class="monto ms-auto">-35.00</span>
             </li>
-            <li class="d-flex align-items-center gap-3">
-              <span>O</span>
+            <li class="fila d-flex align-items-center gap-3">
+              <span class="cuadrito cat-ocio">O</span>
               <div class="descripcion">
                 <p>Cine</p>
-                <p>Ocio - Tarjeta</p>
+                <p class="detalle">Ocio - Tarjeta</p>
               </div>
               <span class="monto ms-auto">-90.00</span>
             </li>
@@ -160,23 +164,23 @@
     <!-- =================================
       NAVEGACIÓN INFERIOR
     ================================= -->
-    <nav class="fixed-bottom d-flex justify-content-around">
+    <nav class="barra fixed-bottom d-flex justify-content-around">
       <button
-        class="activo d-flex flex-column align-items-center"
+        class="btn-nav activo d-flex flex-column align-items-center"
         data-pantalla="pantalla-inicio"
       >
         <i class="bi bi-house"></i>
         <span>Inicio</span>
       </button>
       <button
-        class="d-flex flex-column align-items-center"
+        class="btn-nav d-flex flex-column align-items-center"
         data-pantalla="pantalla-resumen"
       >
         <i class="bi bi-pie-chart"></i>
         <span>Resumen</span>
       </button>
       <button
-        class="d-flex flex-column align-items-center"
+        class="btn-nav d-flex flex-column align-items-center"
         data-pantalla="pantalla-ajustes"
       >
         <i class="bi bi-sliders"></i>
