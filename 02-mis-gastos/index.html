@@ -153,12 +153,36 @@
     <!-- =================================
       BOTÓN + (agregar gasto)
     ================================= -->
-    <button id="btn-agregar"></button>
+    <button id="btn-agregar" aria-label="Agregar Gasto">
+      <i class="bi bi-plus-lg"></i>
+    </button>
 
     <!-- =================================
       NAVEGACIÓN INFERIOR
     ================================= -->
-    <nav></nav>
+    <nav class="fixed-bottom d-flex justify-content-around">
+      <button
+        class="activo d-flex flex-column align-items-center"
+        data-pantalla="pantalla-inicio"
+      >
+        <i class="bi bi-house"></i>
+        <span>Inicio</span>
+      </button>
+      <button
+        class="d-flex flex-column align-items-center"
+        data-pantalla="pantalla-resumen"
+      >
+        <i class="bi bi-pie-chart"></i>
+        <span>Resumen</span>
+      </button>
+      <button
+        class="d-flex flex-column align-items-center"
+        data-pantalla="pantalla-ajustes"
+      >
+        <i class="bi bi-sliders"></i>
+        <span>Ajustes</span>
+      </button>
+    </nav>
 
     <!-- =================================
       CAPA NUEVO GASTO (formulario)
